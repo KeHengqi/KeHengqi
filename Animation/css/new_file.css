@@ -1,0 +1,469 @@
+.sun{
+	background: url(../img/sun2.png) repeat-x 0 0;
+	border-radius: 100%;
+	width: 200px;
+	height: 200px;
+	position: absolute;
+	box-shadow: 0px 0px 10px 1px gold inset;
+	overflow: hidden;
+	animation: rotate_sun 60s linear infinite ;
+	animation-direction: normal;
+	border-image: url(../img/sun.png) 30 30;
+	z-index: 150;
+}
+.sunout{
+	position: absolute;
+	margin: auto;
+	box-shadow: 0px 0px 50px 1px gold;
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	border-image: url(../img/sun2.png) 30 30;
+	top: 35%;
+	left: -50%;
+}
+@keyframes rotate_sun {
+	0%{background-position: 0 0;}
+	100%{background-position: -535px 0;}
+}
+.mercury{
+	position: absolute;
+	margin: 10px 0px 0 0px ;
+	border-radius: 100%;
+	width: 10px;
+	height: 10px;
+	background: url(../img/mercury.png) repeat-x 0 0;
+	animation: animX-mercury 0.5s cubic-bezier(0.36,0,0.64,1) -0.25s  infinite alternate,
+	    animY-mercury 0.5s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		animZ-mercury 0.5s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		scale 0.5s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		nudge 1s  linear infinite;
+}
+@keyframes animZ-mercury{
+	0%{z-index:140 ;}
+	100%{z-index: 170;}
+}
+
+@keyframes animX-mercury{
+	0%{left: 200%;}
+	100%{left: -110%;}
+}
+
+@keyframes animY-mercury{
+	0%{top: 45%;}
+	100%{top: 60%;}
+}
+
+.venus{
+	position: absolute;
+	margin: 5px 0 0 0;
+	border-radius: 100%;
+	width: 30px;
+	height: 30px;
+	background: url(../img/venus.png) repeat-x 0 0;
+	animation: nudge 1s linear infinite,
+	animX-venus 1s cubic-bezier(0.36,0,0.64,1) -0.5s  infinite alternate,
+	    animY-venus 1s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		animZ-venus 1s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		scale 2s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+
+@keyframes animZ-venus{
+	0%{z-index:140 ;}
+	100%{z-index: 170;}
+}
+
+@keyframes animX-venus{
+	0%{left: 240%;}
+	100%{left: -175%;}
+}
+
+@keyframes animY-venus{
+	0%{top: 37%;}
+	100%{top: 70%;}
+}
+
+.earth-moonSystem{
+	position: absolute;
+	margin: 0 0 0 0 ;
+	animation: animX 4s cubic-bezier(0.36,0,0.64,1) -2s  infinite alternate,
+	    animY 4s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		animZ 4s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+.earth{
+	background: url(../img/earth3.png) repeat-x 0 0;
+	border-radius: 100%;
+	width: 100px;
+	height: 100px;
+	position: absolute;
+	z-index: 250;
+	margin: 0 0px 0px 0;
+	animation: 
+		nudge 1s linear infinite ,
+		scale 8s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+.moon{
+	background: url(../img/moon.png) repeat-x 0 0;
+	border-radius: 100%;
+	width: 25px;
+	height: 25px;
+	position: relative;
+	margin: 30px 0 0 0;
+	animation: 
+	nudge 1s linear infinite,
+	animX-moon 2s cubic-bezier(0.36,0,0.64,1) 0s  infinite alternate,
+	animY-moon 2s cubic-bezier(0.36,0,0.64,1) -0.1s infinite alternate,
+	animZ-moon 2s cubic-bezier(0.36,0,0.64,1) -1s infinite alternate,
+	scale 8s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+@keyframes scale{
+	0%{
+		transform: scale(0.6);
+	}
+	50%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(0.6);
+	}
+}
+@keyframes animZ-moon{
+	0%{z-index:249 ;}
+	100%{z-index: 250;}
+}
+
+@keyframes animX-moon{
+	0%{left: -35px;}
+	100%{left: 120px;}
+}
+
+@keyframes animY-moon{
+	0%{top: 0px;}
+	100%{top: 0px;}
+}
+@keyframes animZ{
+	0%{z-index: 130;}
+	100%{z-index: 180;}
+}
+
+@keyframes animX{
+	0%{left:290%;}
+	100%{left: -275%;}
+}
+
+@keyframes animY{
+	0%{top: 32%;}
+	100%{top:60%;}
+}
+
+.mars{
+	background: url(../img/mars.png) repeat-x 0 0;
+	border-radius: 100%;
+	width: 60px;
+	height: 60px;
+	position:absolute;
+	margin: 0px 0 0 0 ;
+	animation: nudge-mars 5s linear infinite,
+	animX-mars 8s cubic-bezier(0.36,0,0.64,1) -4s  infinite alternate,
+	    animY-mars 8s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		animZ-mars 8s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		scale 16s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+
+@keyframes animZ-mars{
+	0%{z-index: 110;}
+	100%{z-index: 200;}
+}
+
+@keyframes animX-mars{
+	0%{left: 420%;}
+	100%{left: -380%;}
+}
+
+@keyframes animY-mars{
+	0%{top: 30%;}
+	100%{top: 65%;}
+}
+
+@keyframes nudge-mars{
+	0%{background-position: 0 0;}
+	100%{background-position:-292px 0;}
+}
+
+.jupiter{
+	background: url(../img/jupiter2.png) repeat-x 0 0;
+	width: 150px;
+	height: 150px;
+	border-radius: 100%;
+	position: absolute;
+	margin: 0 -300px 0 0;
+	animation: nudge-jupiter 0.75s linear infinite,
+	animX-jupiter 16s cubic-bezier(0.36,0,0.64,1) -8s  infinite alternate,
+	    animY-jupiter 16s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		animZ-jupiter 16s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		scale 32s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+@keyframes nudge-jupiter{
+	0%{background-position: 0 0;}
+	100%{background-position: -199px 0;}
+}
+
+@keyframes animZ-jupiter{
+	0%{z-index: 100;}
+	100%{z-index: 210;}
+}
+
+@keyframes animX-jupiter{
+	0%{left: 490%;}
+	100%{left: -550%;}
+}
+
+@keyframes animY-jupiter{
+	0%{top: 12%;}
+	100%{top: 80%;}
+}
+
+.whole-saturn{
+	position: relative;
+	margin: 0px 0 0 -100px;
+	animation: animX-saturn 32s cubic-bezier(0.36,0,0.64,1) -16s  infinite alternate,
+	    animY-saturn 32s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		animZ-saturn 32s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		scale 64s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+
+/*from intenet*/
+.saturn {
+    width: 200px;
+    height: 200px;
+    font-size: 20px;
+    position: relative;
+    transform: rotate(-15deg);
+}
+
+.saturn::before,
+.saturn::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background:
+        radial-gradient(
+            circle at top, 
+            transparent 40%,
+            black
+        ),
+        radial-gradient(
+            transparent 62%,
+            black
+        ),
+        linear-gradient(
+            rgba(212,203,174,1) 0%,
+            rgba(212,203,174,1) 10%,
+            rgba(221,203,157,1) 15%,
+            rgba(221,203,157,1) 17%,
+            rgba(213,181,143,1) 22%,
+            rgba(213,181,143,1) 26%,
+            rgba(208,180,158,1) 32%,
+            rgba(208,180,158,1) 36%,
+            rgba(218,188,162,1) 37%,
+            rgba(218,188,162,1) 39%,
+            rgba(211,184,157,1) 41%,
+            rgba(211,184,157,1) 49%,
+            rgba(205,186,156,1) 51%,
+            rgba(205,186,156,1) 52%,
+            rgba(202,176,153,1) 53%,
+            rgba(202,176,153,1) 65%,
+            rgba(190,177,145,1) 68%,
+            rgba(190,177,145,1) 80%,
+            rgba(150,144,130,1) 91%,
+            rgba(150,144,130,1) 95%,
+            rgba(131,129,117,1) 97%,
+            rgba(131,129,117,1) 100%
+        );
+    border-radius: 50%;
+    left: calc((200px - 100px) / 2);
+    top: calc((200px - 100px) / 2);
+}
+.saturn::before {
+    clip-path: inset(50% 0 0 0);
+}
+
+.saturn::after {
+    clip-path: inset(0 0 50% 0);
+}
+.rings {
+    position: relative;
+    width: inherit;
+    height: inherit;
+    background: radial-gradient(
+        rgba(24,19,25,0) 0%,
+        rgba(53,52,51,0) 34%,
+        rgba(55,54,52,1) 36%,
+        rgba(56,55,53,1) 37%,
+        rgba(68,67,66,1) 38%,
+        rgba(56,55,53,1) 39%,
+        rgba(68,67,66,1) 40%,
+        rgba(56,55,53,1) 41%,
+        rgba(87,77,76,1) 42%,
+        rgba(87,77,76,1) 44%,
+        rgba(113,110,103,1) 46%,
+        rgba(113,110,103,1) 48%,
+        rgba(113,98,93,1) 49%,
+        rgba(113,98,93,1) 51%,
+        rgba(122,115,105,1) 52%,
+        rgba(113,98,93,1) 53%,
+        rgba(113,98,93,1) 54%,
+        rgba(122,115,105,1) 55%,
+        rgba(106,99,89,1) 56%,
+        rgba(106,99,89,1) 58%,
+        rgba(79,76,76,0) 60%,
+        rgba(65,64,70,1) 61%,
+        rgba(65,64,70,1) 62%,
+        rgba(90,85,89,1) 63%,
+        rgba(78,74,73,1) 65%,
+        rgba(78,73,74,1) 67%,
+        rgba(78,73,74,0) 68%,
+        rgba(78,73,75,1) 69%,
+        rgba(78,73,75,1) 70%,
+        rgba(78,73,76,0) 71%,
+        rgba(77,72,76,0) 72%,
+        rgba(24,19,25,0) 100%
+    );
+    transform: rotateX(75deg);
+}
+/*from internet*/
+
+/*@keyframes slide-saturn{
+	0%{transform: rotate(-15deg);}
+	100%{transform: rotate(-15deg);}
+}*/
+
+@keyframes nudge-saturn{
+	0%{background-position: 0 0;}
+	100%{background-position: -642px 0;}
+}
+
+@keyframes animZ-saturn{
+	0%{z-index: 90;}
+	100%{z-index: 240;}
+}
+
+@keyframes animX-saturn{
+	0%{left: 760%;}
+	100%{left: -670%;}
+}
+
+@keyframes animY-saturn{
+	0%{top: 20px;}
+	100%{top: 200px;}
+}
+
+.uranus{
+	background: url(../img/uranus.png) repeat-x 0 0;
+	position: absolute;
+	border-radius: 100%;
+	width: 100px;
+	height: 100px;
+	margin:  0 0 0 -200px;
+	animation: nudge-uranus 1s linear infinite,
+	animX-uranus 64s cubic-bezier(0.36,0,0.64,1) -32s  infinite alternate,
+	    animY-uranus 64s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		animZ-uranus 64s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		scale 128s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+
+
+@keyframes nudge-uranus{
+	0%{background-position: 0 0;}
+	100%{background-position: -400px 0;}
+}
+
+@keyframes animZ-uranus{
+	0%{z-index: 80;}
+	100%{z-index: 250;}
+}
+
+@keyframes animX-uranus{
+	0%{left: 1075%;}
+	100%{left: -690%;}
+}
+
+@keyframes animY-uranus{
+	0%{top: 15%;}
+	100%{top: 90%;}
+}
+
+
+.neptune{
+	background: url(../img/neptune.png) repeat-x 0 0;
+	border-radius: 100%;
+	width: 100px;
+	height: 100px;
+	margin: 0 0 0 -100px;
+	position: absolute;
+	animation: nudge-neptune 1s linear infinite,
+	animX-neptune 128s cubic-bezier(0.36,0,0.64,1) -64s  infinite alternate,
+	    animY-neptune 128s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		animZ-neptune 128s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate,
+		scale 256s cubic-bezier(0.36,0,0.64,1) 0s infinite alternate;
+}
+
+@keyframes nudge-neptune{
+	0%{background-position: 0 0;}
+	100%{background-position: -422px 0;}
+}
+
+@keyframes animZ-neptune{
+	0%{z-index: 70;}
+	100%{z-index: 260;}
+}
+
+@keyframes animX-neptune{
+	0%{left: 1100%;}
+	100%{left: -900%;}
+}
+
+@keyframes animY-neptune{
+	0%{top: 0%;}
+	100%{top: 140%;}
+}
+
+@keyframes nudge{
+	0%{background-position: 0 0;}
+	100%{background-position: -102px 0;}
+}
+
+/*@keyframes revolve{
+	0%, 100% {
+	  transform: translate(0px, 30px);}
+	 
+	25% {
+	  transform: translate(200px,0px);
+		z-index: 0;}
+	50% {
+	  transform: translate(0px, -25px);}
+	  
+	60%{
+		transform: translate(-80px,-30px);
+	}
+	
+	85% {
+	  transform: translate(-280px, 0px);}
+}*/
+
+body {
+	/*The flex CSS property is a shorthand property specifying 
+	the ability of a flex item to alter its dimensions to fill available space. 
+	Flex items can be stretched to use available space proportional to their flex grow factor 
+	or their flex shrink factor to prevent overflow.*/
+  display: flex;
+  /* place all the solarsystem items in center */
+  align-items: center;
+  justify-content: center;
+  background: url(../img/453799-gorgerous-dark-space-wallpaper-1920x1200-for-ios.jpg);
+}
+
+html, body {
+  height: 100%;
+}
